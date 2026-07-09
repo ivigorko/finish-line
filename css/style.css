@@ -162,9 +162,6 @@ button {
 .hero-bg {
   position: absolute;
   inset: 0;
-  /* Сгенерированный силуэт бегуна как основной визуал hero.
-     Расположен по центру чуть выше центра, занимает большую часть hero.
-     Radial-overlay сверху и снизу — затемнение для контраста заголовка и подзаголовка. */
   background:
     radial-gradient(ellipse 90% 50% at 50% 0%,
       rgba(10, 10, 10, 0.65) 0%,
@@ -174,7 +171,7 @@ button {
       transparent 100%),
     radial-gradient(ellipse at center, var(--brand-pink-soft) 0%, transparent 55%),
     radial-gradient(ellipse at center, rgba(255, 255, 255, 0.04) 0%, transparent 60%),
-    url('/assets/hero-runner.png') center 45% / min(75vh, 640px) no-repeat,
+    url('../assets/hero-runner.png') center 50% / min(70vh, 580px) no-repeat,
     var(--bg);
 }
 
@@ -362,7 +359,7 @@ button {
   inset: 0;
   background-image: var(--chapter-bg);
   background-size: cover;
-  background-position: center;
+  background-position: center 25%;
   filter: grayscale(50%) contrast(1.1) brightness(0.95) saturate(0.95);
   transform: scale(1.08);
   transition: filter 0.8s var(--ease-cinematic);
