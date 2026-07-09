@@ -860,6 +860,29 @@ button {
     padding-bottom: 6rem;
   }
 
+  /* На мобиле скрываем 3D-кольца (Three.js TorusGeometry r=7.5/6.2) и pink-glow overlay.
+     Они дают второй и третий "круг" поверх .hero-orb, ломают композицию на узком viewport.
+     Оставляем только .hero-orb с бегуном. */
+  #hero-canvas,
+  .hero-pink-glow {
+    display: none !important;
+  }
+
+  .hero-bg {
+    /* Один мягкий glow в центре, без жёсткого кольца */
+    background:
+      radial-gradient(ellipse 90% 50% at 50% 0%,
+        rgba(10, 10, 10, 0.65) 0%,
+        transparent 100%),
+      radial-gradient(ellipse 90% 30% at 50% 100%,
+        rgba(10, 10, 10, 0.7) 0%,
+        transparent 100%),
+      radial-gradient(ellipse 60% 50% at 50% 50%,
+        rgba(233, 30, 99, 0.18) 0%,
+        transparent 70%),
+      var(--bg);
+  }
+
   .hero-meta {
     flex-wrap: wrap;
     gap: 0.5rem 1rem;
