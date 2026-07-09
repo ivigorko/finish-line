@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FINISH LINE — арт-эксперимент о моменте финиша</title>
+  <meta name="description" content="Кинематографичный арт-объект для бегунов. Три главы: марафон, ультра, трейл. Один момент — финиш.">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <!-- Шрифты: Inter Display (заголовки) + JetBrains Mono (цифры/дистанция) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&family=JetBrains+Mono:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== PRE-LOADER ===== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-pulse"></div>
+      <div class="preloader-text" data-split>дыши</div>
+      <div class="preloader-progress"><span id="preloader-bar"></span></div>
+    </div>
+  </div>
+
+  <!-- ===== ОСНОВНОЙ КОНТЕНТ ===== -->
+  <main id="smooth-wrapper">
+    <div id="smooth-content">
+
+      <!-- HERO -->
+      <section class="hero" data-section="hero" data-accent="#ffffff">
+        <div class="hero-bg">
+          <div class="hero-grain"></div>
+        </div>
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-pink-glow" aria-hidden="true"></div>
+        <div class="hero-content">
+          <div class="hero-meta">
+            <span class="hero-meta-item">FINISH&nbsp;LINE</span>
+            <span class="hero-meta-item">арт-эксперимент</span>
+            <span class="hero-meta-item">2026</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="hero-line-1" data-split>ты на&nbsp;старте.</span>
+          </h1>
+
+          <div class="hero-spacer" aria-hidden="true"></div>
+
+          <p class="hero-subtitle" data-split>
+            одна мысль. одно движение. одна жизнь.
+          </p>
+
+          <div class="hero-scroll-hint" aria-hidden="true">
+            <span class="hero-scroll-text">скролл</span>
+            <span class="hero-scroll-arrow">↓</span>
+          </div>
+        </div>
+
+        <div class="hero-corner hero-corner--tl">26.2 / 100 / ∞</div>
+        <div class="hero-corner hero-corner--tr">00:00:00</div>
+        <div class="hero-corner hero-corner--bl">HR&nbsp;60</div>
+        <div class="hero-corner hero-corner--br">шаг&nbsp;1 / 1</div>
+      </section>
+
+      <!-- CHAPTER 1: МАРАФОН -->
+      <section class="chapter chapter--marathon" data-section="chapter-1" data-accent="#ff6b35" style="--chapter-bg: url('/assets/marathon-moscow.png')">
+        <div class="chapter-media">
+          <div class="chapter-image"></div>
+          <div class="chapter-overlay"></div>
+          <div class="chapter-vignette"></div>
+        </div>
+        <div class="chapter-content">
+          <div class="chapter-number" data-split>01</div>
+          <h2 class="chapter-title" data-split>марафон</h2>
+          <div class="chapter-distance" data-split>
+            <span class="distance-number">26.2</span>
+            <span class="distance-unit">мили</span>
+          </div>
+          <div class="chapter-body">
+            <p class="chapter-line chapter-line--lead" data-split>
+              двенадцать месяцев&nbsp;— ради четырёх часов.
+            </p>
+            <p class="chapter-line" data-split>
+              ты знаешь каждый поворот трассы. ты знаешь, где стенка на&nbsp;32-м километре. ты знаешь, как пахнет пот в&nbsp;подтрибунном тоннеле.
+            </p>
+            <p class="chapter-line chapter-line--quote" data-split>
+              город несёт тебя, даже когда ты уже не бежишь.
+            </p>
+          </div>
+        </div>
+        <div class="chapter-stats" aria-hidden="true">
+          <div class="stat">
+            <span class="stat-value">04:00</span>
+            <span class="stat-label">часа</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">42&nbsp;195</span>
+            <span class="stat-label">метров</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">30</span>
+            <span class="stat-label">секунд славы</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHAPTER 2: УЛЬТРА -->
+      <section class="chapter chapter--ultra" data-section="chapter-2" data-accent="#4ecdc4" style="--chapter-bg: url('/assets/ultra-runner.png')">
+        <div class="chapter-media">
+          <div class="chapter-image"></div>
+          <div class="chapter-overlay"></div>
+          <div class="chapter-vignette"></div>
+        </div>
+        <div class="chapter-content">
+          <div class="chapter-number" data-split>02</div>
+          <h2 class="chapter-title" data-split>ультра</h2>
+          <div class="chapter-distance" data-split>
+            <span class="distance-number">100</span>
+            <span class="distance-unit">километров</span>
+          </div>
+          <div class="chapter-body">
+            <p class="chapter-line chapter-line--lead" data-split>
+              когда солнце садится&nbsp;— ты не&nbsp;останавливаешься.
+            </p>
+            <p class="chapter-line" data-split>
+              фонарь на&nbsp;лбу высвечивает три метра тропы. всё остальное&nbsp;— чернота и&nbsp;твоё дыхание. на&nbsp;семидесятом километре ты уже не&nbsp;бежишь. ты просто дышишь. одно дыхание&nbsp;— один шаг.
+            </p>
+            <p class="chapter-line chapter-line--quote" data-split>
+              в&nbsp;ультре нет финишной черты. есть только момент, когда ты решаешь, что хватит.
+            </p>
+          </div>
+        </div>
+        <div class="chapter-stats" aria-hidden="true">
+          <div class="stat">
+            <span class="stat-value">18</span>
+            <span class="stat-label">часов</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">100</span>
+            <span class="stat-label">км</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">∞</span>
+            <span class="stat-label">силы воли</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHAPTER 3: ТРЕЙЛ -->
+      <section class="chapter chapter--trail" data-section="chapter-3" data-accent="#f4a261" style="--chapter-bg: url('/assets/trail-runner.png')">
+        <div class="chapter-media">
+          <div class="chapter-image"></div>
+          <div class="chapter-overlay"></div>
+          <div class="chapter-vignette"></div>
+        </div>
+        <div class="chapter-content">
+          <div class="chapter-number" data-split>03</div>
+          <h2 class="chapter-title" data-split>трейл</h2>
+          <div class="chapter-distance" data-split>
+            <span class="distance-number">↑</span>
+            <span class="distance-unit">в&nbsp;гору</span>
+          </div>
+          <div class="chapter-body">
+            <p class="chapter-line chapter-line--lead" data-split>
+              камни под&nbsp;ногами. воздух тоньше. сердце громче.
+            </p>
+            <p class="chapter-line" data-split>
+              тропа не&nbsp;спрашивает, готов&nbsp;ли ты. она просто есть. и&nbsp;ты идёшь по&nbsp;ней. и&nbsp;когда вершина открывается между двух елей&nbsp;— ты забываешь, зачем сюда пришёл.
+            </p>
+            <p class="chapter-line chapter-line--quote" data-split>
+              трейл&nbsp;— это не&nbsp;про скорость. это про внимание.
+            </p>
+          </div>
+        </div>
+        <div class="chapter-stats" aria-hidden="true">
+          <div class="stat">
+            <span class="stat-value">2&nbsp;800</span>
+            <span class="stat-label">м набора</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">52</span>
+            <span class="stat-label">км</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">1</span>
+            <span class="stat-label">вершина</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLIMAX — WebGL -->
+      <section class="climax" data-section="climax" data-accent="#ffd700">
+        <canvas id="climax-canvas"></canvas>
+        <div class="climax-overlay"></div>
+        <div class="climax-content">
+          <div class="climax-pre" data-split>и&nbsp;вот</div>
+          <h2 class="climax-title">
+            <span class="climax-line" data-split>ты&nbsp;пересёк</span>
+            <span class="climax-line climax-line--accent" data-split>черту.</span>
+          </h2>
+          <p class="climax-subtitle" data-split>
+            всё, что было до&nbsp;— было ради этой секунды.
+          </p>
+        </div>
+      </section>
+
+      <!-- CLOSING -->
+      <section class="closing" data-section="closing" data-accent="#ffffff">
+        <div class="closing-content">
+          <p class="closing-line" data-split>ты&nbsp;это сделал.</p>
+          <p class="closing-subtitle" data-split>
+            вернись. начни&nbsp;снова. <span class="closing-magenta-accent" aria-hidden="true"></span>финиш ждёт.
+          </p>
+          <div class="closing-footer">
+            <div class="closing-meta">арт-эксперимент · 2026</div>
+            <div class="closing-share">
+              <span>поделись с&nbsp;тем, кто сейчас бежит</span>
+              <span class="closing-arrow">→</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA — форма записи -->
+      <section class="cta" data-section="cta" data-accent="#E91E63">
+        <div class="cta-content">
+          <div class="cta-pre" data-split>идти&nbsp;к&nbsp;цели&nbsp;вместе</div>
+          <h2 class="cta-title">
+            <span data-split>присоединяйся</span>
+            <span class="cta-title-accent" data-split>к&nbsp;команде.</span>
+          </h2>
+          <p class="cta-subtitle" data-split>
+            первая тренировка бесплатно. команда, которая бежит к&nbsp;финишу вместе&nbsp;— с&nbsp;тренером, планом и&nbsp;теми, кто понимает.
+          </p>
+
+          <form class="cta-form" id="cta-form" novalidate>
+            <div class="cta-field">
+              <label class="cta-label" for="cta-name">имя</label>
+              <input class="cta-input" type="text" id="cta-name" name="name" placeholder="как тебя зовут" autocomplete="given-name" required>
+            </div>
+
+            <div class="cta-field">
+              <label class="cta-label" for="cta-phone">телефон</label>
+              <input class="cta-input" type="tel" id="cta-phone" name="phone" placeholder="+7 ___ ___-__-__" autocomplete="tel" required>
+            </div>
+
+            <div class="cta-field">
+              <label class="cta-label" for="cta-goal">цель</label>
+              <select class="cta-select" id="cta-goal" name="goal" required>
+                <option value="" disabled selected>выбери цель</option>
+                <option value="marathon">марафон</option>
+                <option value="ultra">ультра</option>
+                <option value="trail">трейл</option>
+              </select>
+            </div>
+
+            <div class="cta-field">
+              <label class="cta-label" for="cta-when">когда стартовать</label>
+              <select class="cta-select" id="cta-when" name="when" required>
+                <option value="" disabled selected>выбери тайминг</option>
+                <option value="now">сейчас</option>
+                <option value="month">через месяц</option>
+                <option value="thinking">думаю</option>
+              </select>
+            </div>
+
+            <div class="cta-button-row">
+              <button type="submit" class="cta-button">записаться</button>
+              <p class="cta-disclaimer">нажимая кнопку, ты соглашаешься, что мы свяжемся с тобой в течение дня.</p>
+            </div>
+          </form>
+
+          <div class="cta-success" id="cta-success" role="status" aria-live="polite">
+            <span class="cta-success-dot" aria-hidden="true"></span>
+            <p class="cta-success-title">спасибо!</p>
+            <p class="cta-success-text">свяжемся с тобой в течение дня — расскажем про ближайшую тренировку и подберём команду под цель.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ПРОГРЕСС-ИНДИКАТОР (тонкая полоса сверху) -->
+  <div class="progress-bar"><span id="progress-fill"></span></div>
+
+  <!-- ИНДИКАТОР СЕКЦИИ (слева) -->
+  <nav class="section-nav" aria-label="Навигация по разделам">
+    <ul>
+      <li data-target="hero" class="active"><span>00</span><em>старт</em></li>
+      <li data-target="chapter-1"><span>01</span><em>марафон</em></li>
+      <li data-target="chapter-2"><span>02</span><em>ультра</em></li>
+      <li data-target="chapter-3"><span>03</span><em>трейл</em></li>
+      <li data-target="climax"><span>04</span><em>финиш</em></li>
+      <li data-target="closing"><span>05</span><em>тишина</em></li>
+      <li data-target="cta"><span>06</span><em>записаться</em></li>
+    </ul>
+  </nav>
+
+  <!-- КНОПКА MUTE (звук) -->
+  <button class="mute-btn" id="muteBtn" aria-label="Включить/выключить звук">
+    <span class="mute-icon">♪</span>
+  </button>
+
+  <!-- СКРИПТЫ -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+    }
+  }
+  </script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/hero-3d.js"></script>
+  <script type="module" src="js/climax.js"></script>
+</body>
+</html>
