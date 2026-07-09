@@ -171,8 +171,33 @@ button {
       transparent 100%),
     radial-gradient(ellipse at center, var(--brand-pink-soft) 0%, transparent 55%),
     radial-gradient(ellipse at center, rgba(255, 255, 255, 0.04) 0%, transparent 60%),
-    url('../assets/hero-runner.png') center 50% / min(70vh, 580px) no-repeat,
     var(--bg);
+}
+
+/* Круглый "портал" с бегуном. PNG обрезается до формы круга через border-radius. */
+.hero-orb {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width:  min(70vh, 580px, 80vw);
+  height: min(70vh, 580px, 80vw);
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 45%,
+      rgba(233, 30, 99, 0.32) 0%,
+      rgba(233, 30, 99, 0.12) 38%,
+      transparent 72%),
+    radial-gradient(circle at 50% 50%,
+      var(--brand-pink-soft) 0%,
+      transparent 65%),
+    url('../assets/hero-runner.png') center 25% / cover no-repeat;
+  box-shadow:
+    inset 0 0 80px rgba(233, 30, 99, 0.25),
+    0 0 60px rgba(233, 30, 99, 0.15);
 }
 
 .hero-grain {
